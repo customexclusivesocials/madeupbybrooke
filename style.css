@@ -478,3 +478,16 @@ footer ul a:hover{ color: var(--pigment); }
 }
 
 :focus-visible{ outline: 2px solid var(--pigment); outline-offset: 2px; }
+/* Add this to your CSS to prevent SVGs from blowing up */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure the icon container controls the size */
+.hero-figure svg,
+.svc-card .thumb.icononly svg {
+  width: 54px;
+  height: 54px;
+  max-width: 100%;
+}
