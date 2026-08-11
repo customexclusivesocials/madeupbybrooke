@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment & Service Pricing</title>
+    <title>Investment & Pricing — LA PMUA</title>
+    
+    <!-- Google Fonts for High-End Serif Styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-color: #fdfbf7;
-            --card-bg: #ffffff;
-            --text-primary: #2c2c2c;
-            --text-secondary: #666666;
-            --accent-color: #a38260;
-            --accent-light: #f4efe8;
-            --border-color: #e2dbd0;
-            --radius: 12px;
-            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --bg-main: #F8F7F5;
+            --card-bg: #FFFFFF;
+            --text-title: #222222;
+            --text-body: #555555;
+            --text-muted: #888888;
+            --border-light: #E8E5E0;
+            --accent-soft: #F2EFE9;
+            --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+            --font-body: 'Montserrat', -apple-system, sans-serif;
+            --radius-lg: 16px;
+            --radius-sm: 8px;
+            --shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            padding: 40px 20px;
+            background-color: var(--bg-main);
+            color: var(--text-body);
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.7;
+            padding: 60px 20px;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
@@ -36,128 +47,153 @@
             margin: 0 auto;
         }
 
+        /* Site Brand Header */
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            color: var(--text-primary);
+        .brand-title {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--text-title);
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
-        header p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
+        .brand-subtitle {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 18px;
         }
 
+        .header-description {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-body);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* Pricing Grid */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            gap: 30px;
         }
 
+        /* Service Cards */
         .service-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 30px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 35px 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             box-shadow: var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
         }
 
         .service-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--accent-light);
-            padding-bottom: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--text-title);
+            margin-bottom: 12px;
+            line-height: 1.2;
         }
 
         .service-description {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
+            color: var(--text-body);
+            font-size: 0.9rem;
+            font-weight: 300;
             margin-bottom: 20px;
         }
 
         .target-audience {
-            background-color: var(--accent-light);
-            border-left: 3px solid var(--accent-color);
-            padding: 12px 15px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            color: var(--text-primary);
+            background-color: var(--bg-main);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            font-size: 0.85rem;
+            color: var(--text-body);
             margin-bottom: 25px;
+            border-left: 2px solid var(--text-title);
         }
 
         .target-audience strong {
             display: block;
-            margin-bottom: 3px;
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 0.5px;
-            color: var(--accent-color);
+            color: var(--text-title);
+            margin-bottom: 4px;
+            font-weight: 600;
         }
 
-        .pricing-details {
-            border-top: 1px border-color;
-            padding-top: 15px;
-            background-color: #faf8f5;
-            border-radius: 8px;
-            padding: 15px;
+        /* Pricing Details */
+        .pricing-box {
+            background-color: var(--accent-soft);
+            border-radius: var(--radius-sm);
+            padding: 18px;
         }
 
         .price-row {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
+            align-items: flex-start;
+            padding: 8px 0;
         }
 
-        .price-row:last-child {
-            margin-bottom: 0;
+        .price-row:not(:last-child) {
+            border-bottom: 1px dashed var(--border-light);
         }
 
         .price-label {
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-secondary);
+            color: var(--text-muted);
+            padding-top: 2px;
         }
 
         .price-value {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--accent-color);
             text-align: right;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-title);
         }
 
         .price-value span {
             display: block;
-            font-size: 0.8rem;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
             font-weight: 400;
-            color: var(--text-secondary);
+            color: var(--text-body);
+            letter-spacing: 0;
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 20px 15px;
+                padding: 40px 16px;
             }
-            header h1 {
-                font-size: 2rem;
+            .brand-title {
+                font-size: 2.2rem;
+            }
+            .service-card {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -165,11 +201,14 @@
 <body>
 
     <div class="container">
+        <!-- Site Title Section -->
         <header>
-            <h1>Service Investment & Pricing</h1>
-            <p>Transparent pricing for restorative, cosmetic, and paramedical tattooing treatments.</p>
+            <h1 class="brand-title">LA PMUA</h1>
+            <p class="brand-subtitle">Paramedical & Permanent Makeup Tattooing</p>
+            <p class="header-description">Advanced restorative tattooing solutions designed to support healing, confidence, and natural-looking results.</p>
         </header>
 
+        <!-- Pricing Cards -->
         <div class="pricing-grid">
 
             <!-- SMP -->
@@ -181,21 +220,23 @@
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Ideal for men and women experiencing hair thinning, receding hairlines, bald spots, or scalp scarring.
+                        Ideal solution for both men and women experiencing hair thinning, receding hairlines, bald spots, or scalp scarring.
                     </div>
                 </div>
-                <div class="pricing-details">
+                <div class="pricing-box">
                     <div class="price-row">
-                        <span class="price-label">Package Rate</span>
+                        <span class="price-label">Package</span>
                         <div class="price-value">
                             $2,200 <span>Full Scalp (3 Sessions)</span>
+                            <div style="margin-top: 6px;"></div>
                             $1,500 <span>Partial Scalp (3 Sessions)</span>
                         </div>
                     </div>
-                    <div class="price-row" style="margin-top: 10px;">
+                    <div class="price-row">
                         <span class="price-label">Per Session</span>
                         <div class="price-value">
                             $650 <span>Full Scalp</span>
+                            <div style="margin-top: 6px;"></div>
                             $500 <span>Partial Scalp</span>
                         </div>
                     </div>
@@ -211,20 +252,23 @@
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Those looking for an effortless "your lips, but better" look.
+                        Those looking for a "your lips but better" lip look!
                     </div>
                 </div>
-                <div class="pricing-details">
+                <div class="pricing-box">
                     <div class="price-row">
-                        <span class="price-label">Package Rate</span>
+                        <span class="price-label">Package</span>
                         <div class="price-value">
                             $550 <span>1st Appt Only</span>
+                            <div style="margin-top: 6px;"></div>
                             $350 <span>Ombré / Lip Liner</span>
                         </div>
                     </div>
-                    <div class="price-row" style="margin-top: 10px;">
+                    <div class="price-row">
                         <span class="price-label">Per Session</span>
-                        <div class="price-value">$550 <span>All Types</span></div>
+                        <div class="price-value">
+                            $550 <span>All Types</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,21 +278,25 @@
                 <div>
                     <h2 class="service-title">Dark Lip Neutralization</h2>
                     <p class="service-description">
-                        A specialized lip blushing technique designed for clients with darker or cool-toned lips who want to achieve a more overall balanced lip shade using custom neutralizing pigments.
+                        A specialized lip blushing technique designed for clients with darker or cool-toned lips who want to achieve a more overall lip shade by carefully selecting neutralizing pigments to balance dark hues.
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Clients with melanin-rich skin tones or hyperpigmentation on the lips/darker areas.
+                        Melanin-rich skin tones / melanin on lips / darker areas.
                     </div>
                 </div>
-                <div class="pricing-details">
+                <div class="pricing-box">
                     <div class="price-row">
-                        <span class="price-label">Package Rate</span>
-                        <div class="price-value">$650 <span>3 Sessions</span></div>
+                        <span class="price-label">Package</span>
+                        <div class="price-value">
+                            $650 <span>3 Sessions</span>
+                        </div>
                     </div>
                     <div class="price-row">
                         <span class="price-label">Per Session</span>
-                        <div class="price-value">$450 <span>1 Session</span></div>
+                        <div class="price-value">
+                            $450 <span>1 Session</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,21 +306,25 @@
                 <div>
                     <h2 class="service-title">Scar Camouflage</h2>
                     <p class="service-description">
-                        Expert scar camouflage tattooing that seamlessly blends discoloured skin to effectively conceal imperfections when no other treatment can restore your skin's natural beauty.
+                        Experience expert scar camouflage tattooing that seamlessly blends discoloured skin to effectively conceal imperfections when no other treatment can restore your skin's natural beauty.
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
                         Those looking to conceal discoloured skin areas such as red, purple, blue, or white marks by tattooing custom-matched skin pigment for a seamless blend.
                     </div>
                 </div>
-                <div class="pricing-details">
+                <div class="pricing-box">
                     <div class="price-row">
-                        <span class="price-label">Package Rate</span>
-                        <div class="price-value">$450 <span>3 Sessions</span></div>
+                        <span class="price-label">Package</span>
+                        <div class="price-value">
+                            $450 <span>3 Sessions</span>
+                        </div>
                     </div>
                     <div class="price-row">
                         <span class="price-label">Per Session</span>
-                        <div class="price-value">$150 – $250 <span>Per Area / Appt</span></div>
+                        <div class="price-value">
+                            $150 - $250 <span>Per Area / Appt</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,21 +334,25 @@
                 <div>
                     <h2 class="service-title">Inkless Scar Revision</h2>
                     <p class="service-description">
-                        This technique uses a tattoo machine to deposit a specialized serum (rich in vitamins and natural oils) into the skin to remodel scar tissue.
+                        This technique uses a tattoo machine to deposit a specialized serum (often containing vitamins and natural oils) into the scar.
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Those looking to improve skin texture, raised or uneven scars, stretch marks, or post-surgical scars.
+                        Those looking to improve texture of skin, raised or uneven scars, stretchmarks, or post-surgical scars.
                     </div>
                 </div>
-                <div class="pricing-details">
+                <div class="pricing-box">
                     <div class="price-row">
-                        <span class="price-label">Package Rate</span>
-                        <div class="price-value">$650 <span>3 Sessions</span></div>
+                        <span class="price-label">Package</span>
+                        <div class="price-value">
+                            $650 <span>3 Sessions</span>
+                        </div>
                     </div>
                     <div class="price-row">
                         <span class="price-label">Per Session</span>
-                        <div class="price-value">$450 <span>1 Session</span></div>
+                        <div class="price-value">
+                            $450 <span>1 Session</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,17 +366,21 @@
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Clients seeking correction or tone balance for old, faded permanent eyebrow makeup.
+                        Clients with existing faded PMU seeking color correction and neutralization.
                     </div>
                 </div>
-                <div class="pricing-details">
+                <div class="pricing-box">
                     <div class="price-row">
-                        <span class="price-label">Package Rate</span>
-                        <div class="price-value">$650 <span>3 Sessions</span></div>
+                        <span class="price-label">Package</span>
+                        <div class="price-value">
+                            $650 <span>3 Sessions</span>
+                        </div>
                     </div>
                     <div class="price-row">
                         <span class="price-label">Per Session</span>
-                        <div class="price-value">$250 <span>1 Session</span></div>
+                        <div class="price-value">
+                            $250 <span>1 Session</span>
+                        </div>
                     </div>
                 </div>
             </div>
