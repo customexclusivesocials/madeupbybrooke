@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment & Service Pricing</title>
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-primary: #2c2c2c;
+            --text-secondary: #666666;
+            --accent-color: #a38260;
+            --accent-light: #f4efe8;
+            --border-color: #e2dbd0;
+            --radius: 12px;
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--accent-light);
+            padding-bottom: 10px;
+        }
+
+        .service-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .target-audience {
+            background-color: var(--accent-light);
+            border-left: 3px solid var(--accent-color);
+            padding: 12px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            margin-bottom: 25px;
+        }
+
+        .target-audience strong {
+            display: block;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            color: var(--accent-color);
+        }
+
+        .pricing-details {
+            border-top: 1px border-color;
+            padding-top: 15px;
+            background-color: #faf8f5;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .price-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+        }
+
+        .price-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-align: right;
+        }
+
+        .price-value span {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Service Investment & Pricing</h1>
+            <p>Transparent pricing for restorative, cosmetic, and paramedical tattooing treatments.</p>
+        </header>
+
+        <div class="pricing-grid">
+
+            <!-- SMP -->
+            <div class="service-card">
+                <div>
+                    <h2 class="service-title">Scalp Micropigmentation (SMP)</h2>
+                    <p class="service-description">
+                        By placing tiny impressions into the scalp, SMP creates the look of fuller, denser hair or a clean, defined shaved hairline. Results are long-lasting, low maintenance, and customized to match your natural hair.
+                    </p>
+                    <div class="target-audience">
+                        <strong>Who is this for?</strong>
+                        Ideal for men and women experiencing hair thinning, receding hairlines, bald spots, or scalp scarring.
+                    </div>
+                </div>
+                <div class="pricing-details">
+                    <div class="price-row">
+                        <span class="price-label">Package Rate</span>
+                        <div class="price-value">
+                            $2,200 <span>Full Scalp (3 Sessions)</span>
+                            $1,500 <span>Partial Scalp (3 Sessions)</span>
+                        </div>
+                    </div>
+                    <div class="price-row" style="margin-top: 10px;">
+                        <span class="price-label">Per Session</span>
+                        <div class="price-value">
+                            $650 <span>Full Scalp</span>
+                            $500 <span>Partial Scalp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lip Blush -->
+            <div class="service-card">
+                <div>
+                    <h2 class="service-title">Lip Blush</h2>
+                    <p class="service-description">
+                        Achieve fuller lips with our semi-permanent cosmetic tattoo service that lasts up to 3 years!
+                    </p>
+                    <div class="target-audience">
+                        <strong>Who is this for?</strong>
+                        Those looking for an effortless "your lips, but better" look.
+                    </div>
+                </div>
+                <div class="pricing-details">
+                    <div class="price-row">
+                        <span class="price-label">Package Rate</span>
+                        <div class="price-value">
+                            $550 <span>1st Appt Only</span>
+                            $350 <span>Ombré / Lip Liner</span>
+                        </div>
+                    </div>
+                    <div class="price-row" style="margin-top: 10px;">
+                        <span class="price-label">Per Session</span>
+                        <div class="price-value">$550 <span>All Types</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Lip Neutralization -->
+            <div class="service-card">
+                <div>
+                    <h2 class="service-title">Dark Lip Neutralization</h2>
+                    <p class="service-description">
+                        A specialized lip blushing technique designed for clients with darker or cool-toned lips who want to achieve a more overall balanced lip shade using custom neutralizing pigments.
+                    </p>
+                    <div class="target-audience">
+                        <strong>Who is this for?</strong>
+                        Clients with melanin-rich skin tones or hyperpigmentation on the lips/darker areas.
+                    </div>
+                </div>
+                <div class="pricing-details">
+                    <div class="price-row">
+                        <span class="price-label">Package Rate</span>
+                        <div class="price-value">$650 <span>3 Sessions</span></div>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Per Session</span>
+                        <div class="price-value">$450 <span>1 Session</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scar Camouflage -->
+            <div class="service-card">
+                <div>
+                    <h2 class="service-title">Scar Camouflage</h2>
+                    <p class="service-description">
+                        Expert scar camouflage tattooing that seamlessly blends discoloured skin to effectively conceal imperfections when no other treatment can restore your skin's natural beauty.
+                    </p>
+                    <div class="target-audience">
+                        <strong>Who is this for?</strong>
+                        Those looking to conceal discoloured skin areas such as red, purple, blue, or white marks by tattooing custom-matched skin pigment for a seamless blend.
+                    </div>
+                </div>
+                <div class="pricing-details">
+                    <div class="price-row">
+                        <span class="price-label">Package Rate</span>
+                        <div class="price-value">$450 <span>3 Sessions</span></div>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Per Session</span>
+                        <div class="price-value">$150 – $250 <span>Per Area / Appt</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inkless Scar Revision -->
+            <div class="service-card">
+                <div>
+                    <h2 class="service-title">Inkless Scar Revision</h2>
+                    <p class="service-description">
+                        This technique uses a tattoo machine to deposit a specialized serum (rich in vitamins and natural oils) into the skin to remodel scar tissue.
+                    </p>
+                    <div class="target-audience">
+                        <strong>Who is this for?</strong>
+                        Those looking to improve skin texture, raised or uneven scars, stretch marks, or post-surgical scars.
+                    </div>
+                </div>
+                <div class="pricing-details">
+                    <div class="price-row">
+                        <span class="price-label">Package Rate</span>
+                        <div class="price-value">$650 <span>3 Sessions</span></div>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Per Session</span>
+                        <div class="price-value">$450 <span>1 Session</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eyebrow PMU Correction -->
+            <div class="service-card">
+                <div>
+                    <h2 class="service-title">Eyebrow PMU Correction</h2>
+                    <p class="service-description">
+                        This technique involves lightly packing pigment neutralizers over top of previously tattooed orange or blue faded pigment to diffuse discolouration.
+                    </p>
+                    <div class="target-audience">
+                        <strong>Who is this for?</strong>
+                        Clients seeking correction or tone balance for old, faded permanent eyebrow makeup.
+                    </div>
+                </div>
+                <div class="pricing-details">
+                    <div class="price-row">
+                        <span class="price-label">Package Rate</span>
+                        <div class="price-value">$650 <span>3 Sessions</span></div>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Per Session</span>
+                        <div class="price-value">$250 <span>1 Session</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
