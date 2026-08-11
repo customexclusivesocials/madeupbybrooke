@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investment & Pricing — LA PMUA</title>
+    <title>Investment & Pricing — Madeup by Brooke</title>
     
-    <!-- Google Fonts for High-End Serif Styling -->
+    <!-- Google Fonts matching the brand aesthetic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-main: #F8F7F5;
-            --card-bg: #FFFFFF;
-            --text-title: #222222;
-            --text-body: #555555;
-            --text-muted: #888888;
-            --border-light: #E8E5E0;
-            --accent-soft: #F2EFE9;
-            --font-heading: 'Cormorant Garamond', 'Georgia', serif;
-            --font-body: 'Montserrat', -apple-system, sans-serif;
-            --radius-lg: 16px;
-            --radius-sm: 8px;
-            --shadow: 0 10px 30px rgba(0,0,0,0.03);
+            --bg-topbar: #1e1b18;
+            --topbar-text: #e2ded9;
+            --bg-main: #f6f3ee;
+            --card-bg: #ffffff;
+            --text-brand: #2b2825;
+            --subheading-color: #a86c60; /* Soft warm rose/coral */
+            --text-body: #524f4b;
+            --text-muted: #88837e;
+            --border-light: #e8e3dc;
+            --accent-soft: #faf8f5;
+            --font-title: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Montserrat', -apple-system, sans-serif;
+            --radius-lg: 12px;
+            --radius-sm: 6px;
+            --shadow: 0 8px 24px rgba(43, 40, 37, 0.04);
         }
 
         * {
@@ -35,56 +38,110 @@
         body {
             background-color: var(--bg-main);
             color: var(--text-body);
-            font-family: var(--font-body);
-            font-size: 15px;
+            font-family: var(--font-sans);
+            font-size: 14px;
             line-height: 1.7;
-            padding: 60px 20px;
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
+        /* Top Notification Bar */
+        .top-bar {
+            background-color: var(--bg-topbar);
+            color: var(--topbar-text);
+            text-align: center;
+            font-size: 0.68rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 9px 15px;
+            font-weight: 400;
         }
 
-        /* Site Brand Header */
-        header {
-            text-align: center;
-            margin-bottom: 60px;
+        /* Navigation Header Block */
+        header.nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            background-color: var(--bg-main);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .brand-logo {
+            text-decoration: none;
         }
 
         .brand-title {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            color: var(--text-title);
-            margin-bottom: 8px;
-            text-transform: uppercase;
+            font-family: var(--font-title);
+            font-size: 1.55rem;
+            font-weight: 600;
+            color: var(--text-brand);
+            letter-spacing: 0.5px;
+            line-height: 1.1;
         }
 
         .brand-subtitle {
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 3px;
+            font-size: 0.62rem;
+            letter-spacing: 2.5px;
             text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 18px;
+            color: var(--subheading-color);
+            margin-top: 4px;
+            font-weight: 500;
         }
 
-        .header-description {
-            max-width: 600px;
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-brand);
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--subheading-color);
+        }
+
+        /* Page Content Container */
+        .container {
+            max-width: 1100px;
             margin: 0 auto;
-            color: var(--text-body);
-            font-size: 0.95rem;
+            padding: 60px 20px;
+        }
+
+        .page-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .page-intro h1 {
+            font-family: var(--font-title);
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: var(--text-brand);
+            margin-bottom: 10px;
+        }
+
+        .page-intro p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
             font-weight: 300;
+            max-width: 550px;
+            margin: 0 auto;
         }
 
         /* Pricing Grid */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            gap: 28px;
         }
 
         /* Service Cards */
@@ -92,60 +149,60 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-light);
             border-radius: var(--radius-lg);
-            padding: 35px 30px;
+            padding: 32px 28px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(43, 40, 37, 0.07);
         }
 
         .service-title {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--text-title);
+            font-family: var(--font-title);
+            font-size: 1.55rem;
+            font-weight: 400;
+            color: var(--text-brand);
             margin-bottom: 12px;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         .service-description {
             color: var(--text-body);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 300;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .target-audience {
-            background-color: var(--bg-main);
+            background-color: var(--accent-soft);
             border-radius: var(--radius-sm);
-            padding: 14px 16px;
-            font-size: 0.85rem;
+            padding: 12px 14px;
+            font-size: 0.82rem;
             color: var(--text-body);
-            margin-bottom: 25px;
-            border-left: 2px solid var(--text-title);
+            margin-bottom: 22px;
+            border-left: 2px solid var(--subheading-color);
         }
 
         .target-audience strong {
             display: block;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--text-title);
-            margin-bottom: 4px;
+            color: var(--subheading-color);
+            margin-bottom: 3px;
             font-weight: 600;
         }
 
-        /* Pricing Details */
+        /* Pricing Box */
         .pricing-box {
-            background-color: var(--accent-soft);
+            background-color: var(--bg-main);
             border-radius: var(--radius-sm);
-            padding: 18px;
+            padding: 16px;
         }
 
         .price-row {
@@ -160,7 +217,7 @@
         }
 
         .price-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -170,45 +227,66 @@
 
         .price-value {
             text-align: right;
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
+            font-family: var(--font-title);
+            font-size: 1.2rem;
             font-weight: 600;
-            color: var(--text-title);
+            color: var(--text-brand);
         }
 
         .price-value span {
             display: block;
-            font-family: var(--font-body);
-            font-size: 0.75rem;
+            font-family: var(--font-sans);
+            font-size: 0.72rem;
             font-weight: 400;
             color: var(--text-body);
-            letter-spacing: 0;
         }
 
-        @media (max-width: 600px) {
-            body {
-                padding: 40px 16px;
+        @media (max-width: 850px) {
+            header.nav-header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                text-align: center;
             }
-            .brand-title {
-                font-size: 2.2rem;
-            }
-            .service-card {
-                padding: 25px 20px;
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Site Title Section -->
-        <header>
-            <h1 class="brand-title">LA PMUA</h1>
-            <p class="brand-subtitle">Paramedical & Permanent Makeup Tattooing</p>
-            <p class="header-description">Advanced restorative tattooing solutions designed to support healing, confidence, and natural-looking results.</p>
-        </header>
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        Inside Sqin Med by Nurse Faye · 6255 Huggins Street, Unit 6, Niagara Falls, ON · By Appointment Only
+    </div>
 
-        <!-- Pricing Cards -->
+    <!-- Navigation Header -->
+    <header class="nav-header">
+        <a href="index.html" class="brand-logo">
+            <div class="brand-title">Madeup by Brooke</div>
+            <div class="brand-subtitle">Permanent Makeup & Restorative Paramedical Tattooing</div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="pricing.html" class="active">Investment & Pricing</a></li>
+            <li><a href="index.html#journey">Your Journey</a></li>
+            <li><a href="index.html#sessions">Sessions</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#visit">Visit</a></li>
+        </ul>
+    </header>
+
+    <!-- Content Area -->
+    <div class="container">
+        <div class="page-intro">
+            <h1>Investment & Service Pricing</h1>
+            <p>Transparent package options and single session rates for cosmetic and paramedical treatments.</p>
+        </div>
+
         <div class="pricing-grid">
 
             <!-- SMP -->
@@ -228,7 +306,7 @@
                         <span class="price-label">Package</span>
                         <div class="price-value">
                             $2,200 <span>Full Scalp (3 Sessions)</span>
-                            <div style="margin-top: 6px;"></div>
+                            <div style="margin-top: 4px;"></div>
                             $1,500 <span>Partial Scalp (3 Sessions)</span>
                         </div>
                     </div>
@@ -236,7 +314,7 @@
                         <span class="price-label">Per Session</span>
                         <div class="price-value">
                             $650 <span>Full Scalp</span>
-                            <div style="margin-top: 6px;"></div>
+                            <div style="margin-top: 4px;"></div>
                             $500 <span>Partial Scalp</span>
                         </div>
                     </div>
@@ -252,7 +330,7 @@
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Those looking for a "your lips but better" lip look!
+                        Those looking for a 'your lips but better' lip look!
                     </div>
                 </div>
                 <div class="pricing-box">
@@ -260,7 +338,7 @@
                         <span class="price-label">Package</span>
                         <div class="price-value">
                             $550 <span>1st Appt Only</span>
-                            <div style="margin-top: 6px;"></div>
+                            <div style="margin-top: 4px;"></div>
                             $350 <span>Ombré / Lip Liner</span>
                         </div>
                     </div>
@@ -282,7 +360,7 @@
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Melanin-rich skin tones / melanin on lips / darker areas.
+                        Melanin Rich Skin Tones / Melanin on lips/darker areas.
                     </div>
                 </div>
                 <div class="pricing-box">
@@ -310,7 +388,7 @@
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Those looking to conceal discoloured skin areas such as red, purple, blue, or white marks by tattooing custom-matched skin pigment for a seamless blend.
+                        Those looking to conceal discoloured skin areas such as red/purple/blue/white marks by tattooing custom matched skin pigment for a seamless blend.
                     </div>
                 </div>
                 <div class="pricing-box">
@@ -334,11 +412,11 @@
                 <div>
                     <h2 class="service-title">Inkless Scar Revision</h2>
                     <p class="service-description">
-                        This technique uses a tattoo machine to deposit a specialized serum (often containing vitamins and natural oils) into the scar.
+                        This technique uses a tattoo machine to deposit a specialized serum (often containing vitamins and natural oils) into the scar to remodel tissue texture.
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Those looking to improve texture of skin, raised or uneven scars, stretchmarks, or post-surgical scars.
+                        Those looking to improve texture of skin, raised/uneven scars or stretchmarks or post-surgical scars.
                     </div>
                 </div>
                 <div class="pricing-box">
@@ -362,11 +440,11 @@
                 <div>
                     <h2 class="service-title">Eyebrow PMU Correction</h2>
                     <p class="service-description">
-                        This technique involves lightly packing pigment neutralizers over top of previously tattooed orange or blue faded pigment to diffuse discolouration.
+                        This technique involves lightly packing Pigment Neutralizers over top of previously tattooed Orange or blue faded pigment to diffuse discolouration.
                     </p>
                     <div class="target-audience">
                         <strong>Who is this for?</strong>
-                        Clients with existing faded PMU seeking color correction and neutralization.
+                        Clients seeking correction or neutralization for previously tattooed faded pigment.
                     </div>
                 </div>
                 <div class="pricing-box">
