@@ -491,3 +491,8 @@ svg {
   height: 54px;
   max-width: 100%;
 }
+/* Force all hidden sections to display */
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
