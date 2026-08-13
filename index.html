@@ -305,6 +305,8 @@
             }
         }
     </style>
+    <!-- Setmore Anywhere Book Now script (Niagara Falls booking button) -->
+    <script id="anywhere_book_now_script" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
 </head>
 <body>
 
@@ -328,7 +330,6 @@
             <li><a href="#about">About</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#visit">Visit</a></li>
-            <li><a href="booking.html">BOOK Fort Erie</a>
         </ul>
     </header>
 
@@ -470,14 +471,34 @@
         <div class="section-container">
             <div class="section-header">
                 <h2>Visit & Appointments</h2>
-                <p>Located inside Sqin Med by Nurse Faye</p>
+                <p>Two locations to serve you across the Niagara region</p>
             </div>
-            <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <p><strong>Address:</strong> 6255 Huggins Street, Unit 6, Niagara Falls, ON</p>
-                <p style="margin-top: 8px;"><strong>Policy:</strong> By Appointment Only</p>
-                <div style="margin-top: 25px;">
-                    <a href="#visit" class="btn-primary">Book Consultation</a>
+            <div class="grid-3" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 800px; margin: 0 auto;">
+
+                <!-- Niagara Falls Location -->
+                <div class="card" style="text-align: center;">
+                    <h3>Niagara Falls Clinic</h3>
+                    <p style="margin-top: 10px;"><strong>Address:</strong> Inside Sqin Med by Nurse Faye, 6255 Huggins Street, Unit 6, Niagara Falls, ON</p>
+                    <p style="margin-top: 8px;"><strong>Policy:</strong> By Appointment Only</p>
+                    <div style="margin-top: 25px;">
+                        <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://permanentmakeupparamedicaltattooclinic.setmore.com" data-new-tab="false">
+                            Book Niagara Falls
+                        </button>
+                    </div>
                 </div>
+
+                <!-- Fort Erie Location -->
+                <div class="card" style="text-align: center;">
+                    <h3>Fort Erie Clinic</h3>
+                    <p style="margin-top: 10px;"><strong>Address:</strong> Fort Erie, ON</p>
+                    <p style="margin-top: 8px;"><strong>Policy:</strong> By Appointment Only</p>
+                    <div style="margin-top: 25px;">
+                        <!-- Start Square Appointments Embed code -->
+                        <a style="background-color: #006aff; color: white; height: 40px; text-transform: uppercase; font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif; letter-spacing: 1px; line-height: 38px; padding: 0 28px; border-radius: 3px; font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block;" href="https://app.squareup.com/appointments/buyer/widget/ycoqohriackgbk/L7JKP1118RJ9C">Book Fort Erie</a>
+                        <!-- End Square Appointments Embed code -->
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -489,5 +510,3 @@
 
 </body>
 </html>
-
-    
