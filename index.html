@@ -65,7 +65,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 50px;
+            padding: 20px 40px;
             background-color: var(--bg-main);
             border-bottom: 1px solid var(--border-light);
             position: sticky;
@@ -98,7 +98,8 @@
         /* Nav Links */
         .nav-links {
             display: flex;
-            gap: 24px;
+            align-items: center;
+            gap: 20px;
             list-style: none;
         }
 
@@ -114,6 +115,26 @@
         .nav-links a:hover,
         .nav-links a.active {
             color: var(--subheading-color);
+        }
+
+        /* Header Booking Button */
+        .btn-header-book {
+            display: inline-block;
+            background-color: var(--text-brand);
+            color: #ffffff !important;
+            padding: 9px 18px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-header-book:hover {
+            background-color: var(--subheading-color) !important;
+            transform: translateY(-1px);
         }
 
         /* Hero Section */
@@ -307,6 +328,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#visit">Visit</a></li>
+            <li><a href="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" target="_blank" rel="noopener noreferrer" class="btn-header-book">Book Now</a></li>
         </ul>
     </header>
 
@@ -467,3 +489,5 @@
 
 </body>
 </html>
+
+    
