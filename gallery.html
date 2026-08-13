@@ -7,6 +7,9 @@
 <meta name="description" content="Real before-and-after results from Madeup by Brooke: scar camouflage, inkless scar revision, lip blushing, brow colour correction, scalp micropigmentation, and hair micro feathering. Niagara Falls, Ontario.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="style.css">
+
+<!-- Setmore Booking Integration -->
+<script id="anywhere_book_now_script" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
 </head>
 <body>
 
@@ -25,6 +28,8 @@
       <a href="index.html#sessions">Sessions</a>
       <a href="index.html#about">About</a>
       <a href="index.html#visit">Visit</a>
+      <!-- Setmore Header Button -->
+      <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 10px 16px; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book Now</button>
     </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span></button>
   </nav>
@@ -35,6 +40,9 @@
     <a href="index.html#sessions">Sessions</a>
     <a href="index.html#about">About</a>
     <a href="index.html#visit">Visit</a>
+    <div style="padding-top: 10px;">
+      <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; width: 100%;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book Now</button>
+    </div>
   </div>
 </header>
 
@@ -47,7 +55,7 @@
       <h1>Real skin. Real healing. <em>Real results.</em></h1>
       <p class="lede">Every photo below reflects the kind of restorative, custom-matched work Madeup by Brooke is built on — organized by treatment, so you can see exactly what's possible before you book.</p>
       <div class="hero-cta">
-        <a href="#book" class="btn">Book a Complimentary Consultation</a>
+        <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 12px 20px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book Consultation</button>
         <a href="tel:+17055614388" class="btn ghost">Call (705) 561-4388</a>
       </div>
     </div>
@@ -236,7 +244,7 @@
         Every procedure begins with an honest, one-on-one consultation to assess your skin, scar tissue, or pigment goals.
       </p>
       <div class="hero-cta" style="justify-content:center;">
-        <a href="index.html#book" class="btn">Book a Complimentary Consultation</a>
+        <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 14px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book a Complimentary Consultation</button>
         <a href="tel:+17055614388" class="btn ghost">Call (705) 561-4388</a>
       </div>
     </div>
@@ -255,7 +263,7 @@
     });
   }
 
-  // 2. Scroll Reveal Observer (Fixes invisible elements)
+  // 2. Scroll Reveal Observer
   const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -270,7 +278,6 @@
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // Fallback: Ensure everything visible immediately if observer is delayed
   window.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
       const rect = el.getBoundingClientRect();
@@ -282,7 +289,7 @@
     });
   });
 
-  // 3. Simple Image Lightbox / Click
+  // 3. Simple Image Lightbox
   function openLB(el) {
     const img = el.querySelector('img');
     if (img && img.src) {
