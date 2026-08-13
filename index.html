@@ -1,469 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madeup by Brooke — Permanent Makeup & Restorative Paramedical Tattooing</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Madeup by Brooke | Paramedical &amp; Permanent Makeup Tattooing, Niagara Falls</title>
+<meta name="description" content="Real before-and-after results from Madeup by Brooke: scar camouflage, inkless scar revision, lip blushing, brow colour correction, scalp micropigmentation, and hair micro feathering. Niagara Falls, Ontario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
 
-    <style>
-        :root {
-            --bg-topbar: #1e1b18;
-            --topbar-text: #e2ded9;
-            --bg-main: #f6f3ee;
-            --card-bg: #ffffff;
-            --text-brand: #2b2825;
-            --subheading-color: #a86c60; /* Soft warm rose/coral */
-            --text-body: #524f4b;
-            --text-muted: #88837e;
-            --border-light: #e8e3dc;
-            --accent-soft: #faf8f5;
-            --font-title: 'Playfair Display', Georgia, serif;
-            --font-sans: 'Montserrat', -apple-system, sans-serif;
-            --radius-lg: 12px;
-            --radius-sm: 6px;
-            --shadow: 0 8px 24px rgba(43, 40, 37, 0.04);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-body);
-            font-family: var(--font-sans);
-            font-size: 14px;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Top Announcement Bar */
-        .top-bar {
-            background-color: var(--bg-topbar);
-            color: var(--topbar-text);
-            text-align: center;
-            font-size: 0.68rem;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            padding: 9px 15px;
-            font-weight: 400;
-        }
-
-        /* Navigation Header Block */
-        header.nav-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 50px;
-            background-color: var(--bg-main);
-            border-bottom: 1px solid var(--border-light);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .brand-logo {
-            text-decoration: none;
-        }
-
-        .brand-title {
-            font-family: var(--font-title);
-            font-size: 1.55rem;
-            font-weight: 600;
-            color: var(--text-brand);
-            letter-spacing: 0.5px;
-            line-height: 1.1;
-        }
-
-        .brand-subtitle {
-            font-size: 0.62rem;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--subheading-color);
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
-        /* Nav Links */
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-brand);
-            font-size: 0.82rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--subheading-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 90px 20px 70px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-family: var(--font-title);
-            font-size: 3rem;
-            font-weight: 400;
-            color: var(--text-brand);
-            margin-bottom: 15px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            font-weight: 300;
-            margin-bottom: 30px;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: var(--text-brand);
-            color: #ffffff;
-            padding: 12px 30px;
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            font-size: 0.78rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--subheading-color);
-            transform: translateY(-2px);
-        }
-
-        /* Global Section Layout */
-        section {
-            padding: 70px 20px;
-            border-top: 1px solid var(--border-light);
-        }
-
-        .section-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            font-family: var(--font-title);
-            font-size: 2.2rem;
-            font-weight: 400;
-            color: var(--text-brand);
-            margin-bottom: 10px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 300;
-        }
-
-        /* Services Grid */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            box-shadow: var(--shadow);
-        }
-
-        .card h3 {
-            font-family: var(--font-title);
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: var(--text-brand);
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            font-size: 0.88rem;
-            color: var(--text-body);
-            font-weight: 300;
-        }
-
-        /* Investment Callout Banner */
-        .investment-callout {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-lg);
-            padding: 50px 30px;
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-
-        /* Process / Journey Steps */
-        .journey-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .step-number {
-            font-family: var(--font-title);
-            font-size: 2rem;
-            color: var(--subheading-color);
-            margin-bottom: 8px;
-        }
-
-        /* FAQ Accordion-Style Cards */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--bg-topbar);
-            color: var(--topbar-text);
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.78rem;
-            letter-spacing: 1px;
-        }
-
-        footer a {
-            color: var(--topbar-text);
-            text-decoration: underline;
-        }
-
-        @media (max-width: 850px) {
-            header.nav-header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
-                text-align: center;
-                position: relative;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<!-- Setmore Booking Integration -->
+<script id="anywhere_book_now_script" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
-    <div class="top-bar">
-        Inside Sqin Med by Nurse Faye · 6255 Huggins Street, Unit 6, Niagara Falls, ON · By Appointment Only
+<div class="topline">Inside SQIN Med by Nurse Faye · 6255 Huggins Street, Unit 6, Niagara Falls, ON · By Appointment Only</div>
+
+<header class="site" id="siteHeader">
+  <nav class="wrap">
+    <a href="index.html" class="brand">
+      <span class="name">Madeup by Brooke</span>
+      <span class="sub">La PMUA Niagara — Paramedical Tattooing</span>
+    </a>
+    <div class="navlinks">
+      <a href="index.html#services">Services</a>
+      <a href="gallery.html" style="color:var(--pigment);">Portfolio</a>
+      <a href="index.html#journey">Your Journey</a>
+      <a href="index.html#sessions">Sessions</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#visit">Visit</a>
+      <!-- Setmore Header Button -->
+      <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 10px 16px; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book Now</button>
     </div>
-
-    <!-- Navigation Header -->
-    <header class="nav-header">
-        <a href="index.html" class="brand-logo">
-            <div class="brand-title">Madeup by Brooke</div>
-            <div class="brand-subtitle">Permanent Makeup & Restorative Paramedical Tattooing</div>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#services">Services</a></li>
-            <li><a href="pricing.html">Investment & Pricing</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#journey">Your Journey</a></li>
-            <li><a href="#sessions">Sessions</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#visit">Visit</a></li>
-        </ul>
-    </header>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Restorative Tattooing & Permanent Makeup</h1>
-        <p>Advanced, natural-looking solutions designed to support healing, confidence, and effortless daily beauty.</p>
-        <a href="#services" class="btn-primary">Explore Treatments</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#services">Services</a>
+    <a href="gallery.html">Portfolio</a>
+    <a href="index.html#journey">Your Journey</a>
+    <a href="index.html#sessions">Sessions</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#visit">Visit</a>
+    <div style="padding-top: 10px;">
+      <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer; width: 100%;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book Now</button>
     </div>
+  </div>
+</header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Our Specialized Treatments</h2>
-                <p>Precision cosmetic and paramedical tattooing tailored to your individual skin needs.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Scalp Micropigmentation (SMP)</h3>
-                    <p>Creates the look of fuller, denser hair or a clean, defined shaved hairline by placing micro-impressions into the scalp.</p>
-                </div>
-                <div class="card">
-                    <h3>Lip Blush & Dark Lip Neutralization</h3>
-                    <p>Enhance natural color, restore symmetry, or balance cool tone discolouration for a soft, effortless lip shade.</p>
-                </div>
-                <div class="card">
-                    <h3>Scar Camouflage & Revision</h3>
-                    <p>Conceal skin discolouration or utilize inkless serum treatments to remodel scar tissue texture and stretch marks.</p>
-                </div>
-                <div class="card">
-                    <h3>Eyebrow PMU Correction</h3>
-                    <p>Neutralize and diffuse old, faded blue or orange permanent makeup pigments to restore natural brow tones.</p>
-                </div>
-            </div>
+<main id="top">
+
+  <!-- ============ GALLERY HERO ============ -->
+  <section class="gallery-hero">
+    <div class="wrap reveal">
+      <div class="eyebrow">The Portfolio</div>
+      <h1>Real skin. Real healing. <em>Real results.</em></h1>
+      <p class="lede">Every photo below reflects the kind of restorative, custom-matched work Madeup by Brooke is built on — organized by treatment, so you can see exactly what's possible before you book.</p>
+      <div class="hero-cta">
+        <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 12px 20px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book Consultation</button>
+        <a href="tel:+17055614388" class="btn ghost">Call (705) 561-4388</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JUMP NAV ============ -->
+  <nav class="jumpnav" id="jumpnav">
+    <div class="wrap">
+      <a href="#scar-camo">Scar Camouflage</a>
+      <a href="#isr">Inkless Scar Revision</a>
+      <a href="#lips">Lip Blushing</a>
+      <a href="#brows">Brow PMU &amp; Colour Correction</a>
+      <a href="#smp">Scalp Micropigmentation</a>
+      <a href="#feathering">Hair Micro Feathering</a>
+    </div>
+  </nav>
+
+  <!-- ============ 01 SCAR CAMOUFLAGE ============ -->
+  <section class="pf-section" id="scar-camo">
+    <div class="wrap">
+      <div class="pf-head reveal">
+        <div>
+          <div class="num">01 — Paramedical Tattooing</div>
+          <h2>Scar Camouflage Tattooing</h2>
+          <p>Custom-matched pigment tattooed directly into scar tissue, blending it seamlessly into your surrounding skin tone — suitable for surgical, trauma, and discolouration scarring of nearly every kind.</p>
         </div>
-    </section>
-
-    <!-- Investment / Pricing Callout Section -->
-    <section id="investment">
-        <div class="section-container">
-            <div class="investment-callout">
-                <div class="section-header" style="margin-bottom: 20px;">
-                    <h2>Transparent Investment & Pricing</h2>
-                    <p>Explore our package rates and single session options for all treatments.</p>
-                </div>
-                <a href="pricing.html" class="btn-primary">View Full Pricing Page</a>
-            </div>
+        <div class="who-box">
+          <span class="lbl">Good Candidates</span>
+          <ul>
+            <li>Hypopigmented (white) or pale scarring</li>
+            <li>Tummy tucks, C-sections, breast surgery</li>
+            <li>Facelifts, trauma scars &amp; skin graft borders</li>
+          </ul>
+          <div class="sess">Typically 2–4 sessions</div>
         </div>
-    </section>
+      </div>
+      <div class="pf-grid">
+        <div class="ph wide" onclick="openLB(this)"><img src="images/scar-camo-1.jpg" alt="Scar Camouflage Before and After"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/scar-camo-2.jpg" alt="Surgical Scar Camouflage"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/scar-camo-3.jpg" alt="C-Section Scar Revision"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Your Journey Section -->
-    <section id="journey">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Your Journey</h2>
-                <p>What to expect from your initial consultation to full healing.</p>
-            </div>
-            <div class="journey-steps">
-                <div class="card">
-                    <div class="step-number">01</div>
-                    <h3>Consultation & Analysis</h3>
-                    <p>We assess your skin tone, scarring, or pigment structure to design a custom treatment path.</p>
-                </div>
-                <div class="card">
-                    <div class="step-number">02</div>
-                    <h3>Precision Application</h3>
-                    <p>Each treatment is executed using sterile, medical-grade equipment with custom color blending.</p>
-                </div>
-                <div class="card">
-                    <div class="step-number">03</div>
-                    <h3>Healing & Maintenance</h3>
-                    <p>Comprehensive aftercare guidance is provided to ensure optimal long-term pigment retention.</p>
-                </div>
-            </div>
+  <!-- ============ 02 INKLESS SCAR REVISION (ISR) ============ -->
+  <section class="pf-section" id="isr">
+    <div class="wrap">
+      <div class="pf-head reveal">
+        <div>
+          <div class="num">02 — Paramedical Revision</div>
+          <h2>Inkless Scar Revision (ISR)</h2>
+          <p>A specialized serum-based rotary technique that stimulates your body's natural cellular renewal, rebuilding collagen, elastin, and melanin to improve scar texture and depth without pigment.</p>
         </div>
-    </section>
-
-    <!-- Sessions Section -->
-    <section id="sessions">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Treatment Sessions</h2>
-                <p>Restorative tattooing is a multi-layered process designed for natural, gradual results.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Session 1: The Foundation</h3>
-                    <p>Establishing shape, tone base, and initial pigment placement tailored to your skin tissue.</p>
-                </div>
-                <div class="card">
-                    <h3>Session 2: Density & Depth</h3>
-                    <p>Perfecting density, adjusting warmth/coolness, and building seamless blend layer by layer.</p>
-                </div>
-                <div class="card">
-                    <h3>Session 3: Perfecting Touch</h3>
-                    <p>Final detail adjustments to maximize longevity, smooth transitions, and complete your transformation.</p>
-                </div>
-            </div>
+        <div class="who-box">
+          <span class="lbl">Good Candidates</span>
+          <ul>
+            <li>Stretch marks (striae alba &amp; rubra)</li>
+            <li>Textured, raised, or tethered surgical scars</li>
+            <li>Hyperpigmented or uneven scar tissue</li>
+          </ul>
+          <div class="sess">Typically 1–3 sessions</div>
         </div>
-    </section>
+      </div>
+      <div class="pf-grid">
+        <div class="ph" onclick="openLB(this)"><img src="images/isr-1.jpg" alt="Inkless Scar Revision Before and After"></div>
+        <div class="ph wide" onclick="openLB(this)"><img src="images/isr-2.jpg" alt="Stretch Mark Revision Results"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/isr-3.jpg" alt="Collagen Remodelling Scar Treatment"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>About Brooke</h2>
-                <p>Paramedical & Permanent Makeup Artist</p>
-            </div>
-            <div class="card" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 0.95rem; line-height: 1.8;">
-                    Specializing in advanced restorative paramedical tattooing and cosmetic permanent makeup, my goal is to help clients restore confidence and achieve natural-looking results. Operating inside Sqin Med by Nurse Faye in Niagara Falls, ON, every procedure is performed in a clean, professional, clinical environment.
-                </p>
-            </div>
+  <!-- ============ 03 LIP BLUSHING ============ -->
+  <section class="pf-section" id="lips">
+    <div class="wrap">
+      <div class="pf-head reveal">
+        <div>
+          <div class="num">03 — Permanent Makeup</div>
+          <h2>Lip Blushing &amp; Neutralization</h2>
+          <p>Subtle, customized sheer pigment implantation to restore symmetry, define lip vermilion borders, correct cool undertones, and deliver a healthy natural wash of colour.</p>
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="card">
-                    <h3>How many sessions will I need?</h3>
-                    <p>Most paramedical and PMU procedures require 2 to 3 sessions spaced 4-6 weeks apart to achieve optimal depth and longevity.</p>
-                </div>
-                <div class="card">
-                    <h3>Is there any downtime?</h3>
-                    <p>Downtime is minimal. Mild redness or swelling may occur for 24-48 hours. Comprehensive aftercare instructions will be provided.</p>
-                </div>
-            </div>
+        <div class="who-box">
+          <span class="lbl">Good Candidates</span>
+          <ul>
+            <li>Loss of natural lip border and shape</li>
+            <li>Cool, pale, or uneven natural lip tones</li>
+            <li>Melanin-rich lip neutralization needs</li>
+          </ul>
+          <div class="sess">Typically 1–2 sessions</div>
         </div>
-    </section>
+      </div>
+      <div class="pf-grid">
+        <div class="ph" onclick="openLB(this)"><img src="images/lip-blush-1.jpg" alt="Lip Blushing Natural Tint"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/lip-blush-2.jpg" alt="Lip Neutralization Before and After"></div>
+        <div class="ph wide" onclick="openLB(this)"><img src="images/lip-blush-3.jpg" alt="Healed Lip Blush Enhancement"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Visit / Contact Section -->
-    <section id="visit">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Visit & Appointments</h2>
-                <p>Located inside Sqin Med by Nurse Faye</p>
-            </div>
-            <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <p><strong>Address:</strong> 6255 Huggins Street, Unit 6, Niagara Falls, ON</p>
-                <p style="margin-top: 8px;"><strong>Policy:</strong> By Appointment Only</p>
-                <div style="margin-top: 25px;">
-                    <a href="#visit" class="btn-primary">Book Consultation</a>
-                </div>
-            </div>
+  <!-- ============ 04 EYEBROW PMU & COLOUR CORRECTION ============ -->
+  <section class="pf-section" id="brows">
+    <div class="wrap">
+      <div class="pf-head reveal">
+        <div>
+          <div class="num">04 — Corrective PMU</div>
+          <h2>Eyebrow PMU &amp; Colour Correction</h2>
+          <p>Advanced corrective tattooing using warm or neutralizing target modifiers to adjust old faded PMU (red, blue, grey, or purple brows) back to natural, flattering tones alongside fresh structural design.</p>
         </div>
-    </section>
+        <div class="who-box">
+          <span class="lbl">Good Candidates</span>
+          <ul>
+            <li>Brows shifted to blue, grey, pink, or orange</li>
+            <li>Asymmetry from previous permanent makeup</li>
+            <li>Clients wanting soft ombre/powder restoration</li>
+          </ul>
+          <div class="sess">Typically 2–3 sessions</div>
+        </div>
+      </div>
+      <div class="pf-grid">
+        <div class="ph wide" onclick="openLB(this)"><img src="images/brow-correction-1.jpg" alt="Eyebrow Colour Correction Before and After"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/brow-correction-2.jpg" alt="Grey Brow Neutralization"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/brow-pmu-3.jpg" alt="Restorative Eyebrow PMU"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Madeup by Brooke. All Rights Reserved. | Niagara Falls, ON</p>
-    </footer>
+  <!-- ============ 05 SCALP MICROPIGMENTATION (SMP) ============ -->
+  <section class="pf-section" id="smp">
+    <div class="wrap">
+      <div class="pf-head reveal">
+        <div>
+          <div class="num">05 — Density &amp; Restoration</div>
+          <h2>Scalp Micropigmentation (SMP)</h2>
+          <p>Precision micro-deposit follicular impressions replicated across the scalp to camouflage hair thinning, restore receding hairlines, and conceal FUE/FUT hair transplant surgical scars.</p>
+        </div>
+        <div class="who-box">
+          <span class="lbl">Good Candidates</span>
+          <ul>
+            <li>Diffuse hair thinning across crown or part line</li>
+            <li>Receding hairlines &amp; male/female pattern hair loss</li>
+            <li>FUT/FUE hair transplant strip or punch scars</li>
+          </ul>
+          <div class="sess">Typically 2–4 sessions</div>
+        </div>
+      </div>
+      <div class="pf-grid">
+        <div class="ph" onclick="openLB(this)"><img src="images/smp-density-1.jpg" alt="Scalp Micropigmentation Density"></div>
+        <div class="ph wide" onclick="openLB(this)"><img src="images/smp-hairline-2.jpg" alt="SMP Hairline Restoration"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/smp-scar-3.jpg" alt="FUE Transplant Scar Camouflage"></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ============ 06 HAIR MICRO FEATHERING ============ -->
+  <section class="pf-section" id="feathering">
+    <div class="wrap">
+      <div class="pf-head reveal">
+        <div>
+          <div class="num">06 — Hairline Detailing</div>
+          <h2>Hair Micro Feathering</h2>
+          <p>Ultra-fine, directional micro-stroke tattooing tailored specifically to soften hairline perimeters, temples, and frontal growth patterns for an undetectable, soft natural frame.</p>
+        </div>
+        <div class="who-box">
+          <span class="lbl">Good Candidates</span>
+          <ul>
+            <li>Sparse temple zones &amp; traction alopecia edges</li>
+            <li>Clients seeking natural soft wisps along hairline</li>
+            <li>Post-surgical temple pull-back or scarring</li>
+          </ul>
+          <div class="sess">Typically 1–2 sessions</div>
+        </div>
+      </div>
+      <div class="pf-grid">
+        <div class="ph wide" onclick="openLB(this)"><img src="images/feathering-1.jpg" alt="Hair Micro Feathering Frontal Edge"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/feathering-2.jpg" alt="Temple Hair Feathering Before and After"></div>
+        <div class="ph" onclick="openLB(this)"><img src="images/feathering-3.jpg" alt="Natural Hairline Feathering"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING CTA SECTION ============ -->
+  <section class="pf-section" id="book" style="border-top:1px solid rgba(255,255,255,0.08);">
+    <div class="wrap reveal" style="text-align:center; max-width:720px; margin:0 auto;">
+      <div class="eyebrow">Start Your Transformation</div>
+      <h2 style="margin-bottom:1rem;">Ready to discuss your treatment?</h2>
+      <p style="color:rgba(255,255,255,0.7); line-height:1.6; margin-bottom:2rem;">
+        Every procedure begins with an honest, one-on-one consultation to assess your skin, scar tissue, or pigment goals.
+      </p>
+      <div class="hero-cta" style="justify-content:center;">
+        <button id="Anywhere_button_iframe" class="anywhere-book-now-button" style="background-color: #000; color: #fff; border: none; padding: 14px 24px; font-size: 15px; font-weight: 600; border-radius: 6px; cursor: pointer;" data-booking-url="https://madeupbybrookepmuparamedicalrestorativetattooclinic.setmore.com" data-new-tab="false">Book a Complimentary Consultation</button>
+        <a href="tel:+17055614388" class="btn ghost">Call (705) 561-4388</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // 1. Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+  }
+
+  // 2. Scroll Reveal Observer
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active', 'visible', 'is-visible');
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'none';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  window.addEventListener('DOMContentLoaded', () => {
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('active', 'visible', 'is-visible');
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
+  });
+
+  // 3. Simple Image Lightbox
+  function openLB(el) {
+    const img = el.querySelector('img');
+    if (img && img.src) {
+      window.open(img.src, '_blank');
+    }
+  }
+</script>
 </body>
 </html>
