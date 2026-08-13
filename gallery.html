@@ -245,13 +245,50 @@
 </main>
 
 <script>
-function openLB(el) {
-  // Lightbox handler
-  const img = el.querySelector('img');
-  if (img) {
-    window.open(img.src, '_blank');
+  // 1. Mobile Menu Toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
   }
-}
+
+  // 2. Scroll Reveal Observer (Fixes invisible elements)
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active', 'visible', 'is-visible');
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'none';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Fallback: Ensure everything visible immediately if observer is delayed
+  window.addEventListener('DOMContentLoaded', () => {
+    revealElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('active', 'visible', 'is-visible');
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
+  });
+
+  // 3. Simple Image Lightbox / Click
+  function openLB(el) {
+    const img = el.querySelector('img');
+    if (img && img.src) {
+      window.open(img.src, '_blank');
+    }
+  }
 </script>
 </body>
 </html>
