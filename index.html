@@ -425,57 +425,66 @@
         <a href="#services" class="btn-primary">Explore Treatments</a>
     </div>
 
-    <!-- Quick Contact Form Section -->
-<section id="quick-contact" style="max-width: 600px; margin: 40px auto; padding: 25px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-family: sans-serif;">
-  <h2 style="margin-top: 0; color: #333; text-align: center;">Interested in a service? send us a message!</h2>
-  <p style="text-align: center; color: #666; font-size: 0.95rem; margin-bottom: 20px;">
-    Fill out the form below and I'll respond within <strong>24 hours</strong>!
-  </p>
-
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+<!-- Form Container with Inline Styling -->
+<div style="max-width: 480px; margin: 2rem auto; padding: 2rem; background: #ffffff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  
+  <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
     
-    <!-- Name Field -->
-    <div>
-      <label for="name" style="display: block; font-weight: bold; margin-bottom: 5px; color: #444;">Full Name *</label>
-      <input type="text" id="name" name="name" required placeholder="John Doe" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-    </div>
+    <!-- Required Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="e5b53ab3-b6ef-419b-b46d-d4455bfd18a8">
+    
+    <!-- Optional: Redirect URL after submission -->
+    <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks"> -->
 
-    <!-- Phone Number Field -->
-    <div>
-      <label for="phone" style="display: block; font-weight: bold; margin-bottom: 5px; color: #444;">Phone Number *</label>
-      <input type="tel" id="phone" name="phone" required placeholder="(555) 000-0000" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+    <!-- Name Field -->
+    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+      <label for="name" style="font-size: 0.9rem; font-weight: 600; color: #333333;">Full Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Jane Doe" 
+        required 
+        style="padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; outline: none; transition: border-color 0.2s;"
+      >
     </div>
 
     <!-- Email Field -->
-    <div>
-      <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px; color: #444;">Email Address *</label>
-      <input type="email" id="email" name="email" required placeholder="john@example.com" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+      <label for="email" style="font-size: 0.9rem; font-weight: 600; color: #333333;">Email Address</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="jane@example.com" 
+        required 
+        style="padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; outline: none; transition: border-color 0.2s;"
+      >
     </div>
 
-    <!-- Service of Interest Dropdown -->
-    <div>
-      <label for="service" style="display: block; font-weight: bold; margin-bottom: 5px; color: #444;">Service of Interest *</label>
-      <select id="service" name="service" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #fff;">
-        <option value="" disabled selected>Select a service...</option>
-        <option value="Service 1">Service 1</option>
-        <option value="Service 2">Service 2</option>
-        <option value="Service 3">Service 3</option>
-        <option value="Other">Other / General Inquiry</option>
-      </select>
-    </div>
-
-    <!-- Optional Message Field -->
-    <div>
-      <label for="message" style="display: block; font-weight: bold; margin-bottom: 5px; color: #444;">Additional Details (Optional)</label>
-      <textarea id="message" name="message" rows="3" placeholder="Tell me a bit about your project..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
+    <!-- Message Field -->
+    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+      <label for="message" style="font-size: 0.9rem; font-weight: 600; color: #333333;">Message</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        rows="5" 
+        placeholder="How can we help you?" 
+        required 
+        style="padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; outline: none; resize: vertical; transition: border-color 0.2s;"
+      ></textarea>
     </div>
 
     <!-- Submit Button -->
-    <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 12px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background-color 0.2s;">
-      Send Request
+    <button 
+      type="submit" 
+      style="margin-top: 0.5rem; padding: 0.85rem 1.5rem; background-color: #111827; color: #ffffff; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s;"
+    >
+      Send Message
     </button>
+    
   </form>
-</section>
+</div>
 
     <!-- Services Section -->
     <section id="services">
