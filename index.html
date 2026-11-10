@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
@@ -246,8 +247,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <button class="tab" role="tab" id="t-ff" aria-selected="false" aria-controls="p-ff">Fort Erie</button>
   </div>
   <div class="panel" id="p-nf" role="tabpanel" aria-labelledby="t-nf">
-    <h3>Niagara Falls</h3><p>Inside SQIN Med by Nurse Faye</p><p>6255 Huggins Street, Unit 6, Niagara Falls, ON</p><p>By appointment only</p>
-    <a class="btn" data-book="nf" href="#visit">Book Niagara Falls</a>
+    <h3>Niagara Falls</h3><p>Inside <a href="https://permanentmakeupparamedicaltattooclinic.setmore.com/" target="_blank" rel="noopener">SQIN Med</a> by Nurse Faye</p><p>6255 Huggins Street, Unit 6, Niagara Falls, ON</p><p>By appointment only</p>
+    <a class="btn" data-book="nf" href="https://permanentmakeupparamedicaltattooclinic.setmore.com/">Book Niagara Falls</a>
   </div>
   <div class="panel" id="p-ff" role="tabpanel" aria-labelledby="t-ff" hidden>
     <h3>Fort Erie</h3><p>Fort Erie, ON</p><p> 3700 Hershey Street Ridgeway, ONBy appointment only</p>
@@ -261,7 +262,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <script>
 // Booking links: replace the Niagara Falls URL with your Setmore link.
 const BOOK = {
-  nf: "https://madeupbybrooke.setmore.com/",  // TODO: confirm your Setmore URL
+  nf: "https://permanentmakeupparamedicaltattooclinic.setmore.com/",
   ff: "https://app.squareup.com/appointments/buyer/widget/ycoqohriackgbk/L7JKP1118RJ9C"
 };
 document.querySelectorAll("[data-book]").forEach(a=>{a.href=BOOK[a.dataset.book];a.target="_blank";a.rel="noopener"});
@@ -288,3 +289,4 @@ document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
 </script>
 </body>
 </html>
+```
