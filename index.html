@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Madeup by Brooke — Permanent Makeup & Restorative Paramedical Tattooing</title>
-<meta name="description" content="Scalp micropigmentation, hairline density, lip blush and scar camouflage in Niagara Falls and Fort Erie, Ontario. By appointment, text 705-561-4388 t0 book">
+<meta name="description" content="Scalp micropigmentation, hairline density, lip blush and scar camouflage in Niagara Falls and Fort Erie, Ontario. By appointment, text 705-561-4388 to book">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -36,14 +36,28 @@ section{padding:96px 0}
 
 /* announcement + nav */
 .bar{background:var(--ink);color:var(--blush);text-align:center;font-size:.85rem;padding:8px 16px}
+.bar a{color:inherit;font-weight:500}
 header{position:sticky;top:0;z-index:20;background:rgba(250,247,245,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
 .logo{font-family:var(--serif);font-size:1.7rem;font-weight:500;text-decoration:none;letter-spacing:.01em}
 .links{display:flex;gap:28px;font-size:.95rem}
 .links a{text-decoration:none;color:var(--mute)}
 .links a:hover{color:var(--ink)}
-.navbtns{display:flex;gap:8px}
-@media(max-width:960px){.links{display:none}}
+.navbtns{display:flex;align-items:center;gap:8px}
+
+/* hamburger */
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:var(--white);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .2s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:960px){
+  .burger{display:flex}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bone);border-bottom:1px solid var(--line);padding:4px 24px 20px;box-shadow:0 12px 24px rgba(43,32,37,.08)}
+  .links.open{display:flex}
+  .links a{padding:16px 0;border-bottom:1px solid var(--line);font-size:1.1rem;color:var(--ink)}
+  .links a:last-child{border-bottom:0}
+}
 @media(max-width:560px){.navbtns .ghost{display:none}.logo{font-size:1.4rem}}
 
 /* media slots: drop a photo at the listed path and it covers the placeholder */
@@ -133,17 +147,33 @@ footer{padding:40px 0;font-size:.9rem;color:var(--mute)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
+<!-- Setmore Anywhere Book Now script (Niagara Falls booking button) -->
+<script id="https://permanentmakeupparamedicaltattooclinic.setmore.com/t" src="https://permanentmakeupparamedicaltattooclinic.setmore.com"></script>
 </head>
 <body>
-<div class="bar">Text to book a Consultation in Niagara Falls or Fort Erie Clinics &middot; 17055614388</div>
-<header><div class="wrap nav">
-  <a class="logo" href="#top">Madeup by Brooke</a>
-  <nav class="links" aria-label="Main">
-    <a href="#services">Treatments</a><a href="gallery.html">Gallery</a><a href="pricing.html">Pricing</a>
-    <a href="#journey">Your journey</a><a href="#faq">FAQ</a><a href="#visit">Visit</a>
-  </nav>
-  </style>    <!-- Setmore Anywhere Book Now script (Niagara Falls booking button) -->    <script id="https://permanentmakeupparamedicaltattooclinic.setmore.com/t" src="https://permanentmakeupparamedicaltattooclinic.setmore.com"></script></head><body>
-</div></header>
+<div class="bar">Text to book a Consultation in Niagara Falls or Fort Erie Clinics &middot; <a href="sms:+17055614388">705-561-4388</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Madeup by Brooke</a>
+    <nav class="links" id="menu" aria-label="Main">
+      <a href="#services">Treatments</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#journey">Your journey</a>
+      <a href="#faq">FAQ</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="navbtns">
+      <a class="btn ghost sm" href="pricing.html">Pricing</a>
+      <a class="btn sm" href="#visit">Book</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
 <main id="top">
 <section class="hero"><div class="wrap grid">
@@ -224,7 +254,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div>
     <h2>Meet <em>Brooke.</em></h2>
     <p class="lede" style="margin:16px 0 24px">Paramedical &amp; permanent makeup artist, and owner of Madeup by Brooke.</p>
-    <p style="color:var(--mute);max-width:52ch">I specialize in advanced restorative paramedical tattooing and cosmetic permanent makeup. My goal is to help you feel confident and get natural-looking results. Every procedure happens in a clean, professional, clinical space..</p>
+    <p style="color:var(--mute);max-width:52ch">I specialize in advanced restorative paramedical tattooing and cosmetic permanent makeup. My goal is to help you feel confident and get natural-looking results. Every procedure happens in a clean, professional, clinical space.</p>
     <p style="margin-top:28px"><a class="btn" href="#visit">Book a consultation</a></p>
   </div>
 </div></section>
@@ -250,7 +280,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <a class="btn" data-book="nf" href="https://permanentmakeupparamedicaltattooclinic.setmore.com/">Book Niagara Falls</a>
   </div>
   <div class="panel" id="p-ff" role="tabpanel" aria-labelledby="t-ff" hidden>
-    <h3>Fort Erie</h3><p>Fort Erie, ON</p><p> 3700 Hershey Street Ridgeway, ONBy appointment only</p>
+    <h3>Fort Erie</h3><p>3700 Hershey Street, Ridgeway, ON</p><p>By appointment only</p>
     <a class="btn" data-book="ff" href="#visit">Book Fort Erie</a>
   </div>
 </div></section>
@@ -278,14 +308,25 @@ const res=document.getElementById("result");
 document.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
   document.querySelectorAll(".opt").forEach(o=>o.setAttribute("aria-pressed",o===b));
   const m=MATCH[b.dataset.k];
-  res.innerHTML=`<h3>${m.t}</h3><p>${m.d}</p><div class="cta"><a class="btn" href="${BOOK.nf}" target="https://permanentmakeupparamedicaltattooclinic.setmore.com/" rel="https://permanentmakeupparamedicaltattooclinic.setmore.com/">Book Niagara Falls</a><a class="btn ghost" href="${BOOK.ff}" target="_blank" rel="noopener">Book Fort Erie</a></div>`;
+  res.innerHTML=`<h3>${m.t}</h3><p>${m.d}</p><div class="cta"><a class="btn" href="${BOOK.nf}" target="_blank" rel="noopener">Book Niagara Falls</a><a class="btn ghost" href="${BOOK.ff}" target="_blank" rel="noopener">Book Fort Erie</a></div>`;
 }));
 
 // Location tabs
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
   document.querySelectorAll(".tab").forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on});
 }));
+
+// Mobile menu
+const burger=document.getElementById("burger"), menu=document.getElementById("menu");
+function setMenu(open){
+  menu.classList.toggle("open",open);
+  burger.setAttribute("aria-expanded",open);
+  burger.setAttribute("aria-label",open?"Close menu":"Open menu");
+}
+burger.addEventListener("click",()=>setMenu(!menu.classList.contains("open")));
+menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});
+window.matchMedia("(min-width:961px)").addEventListener("change",()=>setMenu(false));
 </script>
 </body>
 </html>
-```
